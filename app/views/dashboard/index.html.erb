@@ -1,0 +1,27 @@
+
+      <h2>Gastos</h2>
+        <table class="table table-striped ">
+          <thead>
+            <tr>
+
+              <th scope="col">expense</th>
+              <th scope="col">amount</th>
+              <th scope="col">details</th>
+              <th scope="col">Occurence date</th>
+            </tr>
+          </thead>
+          <tbody>
+           <% @expenses.each do |e|%>
+                <tr>
+                <td> <%= link_to e.expense, e %> </td>
+                <td> <%= e.amount %> </td>
+                <td> <%= e.obs %> </td>
+                <td> <%= e.date.strftime("%d/%m/%y") %> </td>
+            <% end %>
+                </tr>
+          </tbody>
+        </table>
+
+
+
+
